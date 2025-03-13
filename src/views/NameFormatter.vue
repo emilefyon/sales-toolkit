@@ -93,14 +93,74 @@
     </TextProcessor>
     
     <Card class="mt-6 bg-surface-50 dark:bg-surface-800/50 border border-surface-200 dark:border-surface-700">
-      <h3 class="text-md font-medium mb-2 text-surface-800 dark:text-surface-200">What This Tool Does</h3>
-      <p class="text-sm text-surface-600 dark:text-surface-400 mb-2">
-        Consistently formats names to your preferred style, helping maintain clean and standardized customer data.
-      </p>
-      <p class="text-sm text-surface-600 dark:text-surface-400">
-        The name prefix handling option properly formats prefixes like Dr., Mr., Mrs., etc. and handles compound last names
-        like "Van Der", "Mac", "O'", etc.
-      </p>
+      <h3 class="text-md font-medium mb-2 text-surface-800 dark:text-surface-200">How the Name Formatter Works</h3>
+      
+      <div class="space-y-4 text-sm text-surface-600 dark:text-surface-400">
+        <p>
+          The Name Formatter tool standardizes names in your data using intelligent formatting rules. It handles various input formats and applies consistent styling based on your preferences.
+        </p>
+        
+        <div>
+          <h4 class="font-medium text-surface-700 dark:text-surface-300 mb-1">Formatting Options:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Title Case:</strong> Capitalizes the first letter of each name part while keeping the rest lowercase (e.g., "John Smith", "Van Der Meer")</li>
+            <li><strong>UPPERCASE:</strong> Converts all letters to uppercase for maximum visibility (e.g., "JOHN SMITH", "VAN DER MEER")</li>
+            <li><strong>Last, First:</strong> Reverses the name order and adds a comma, useful for alphabetical sorting (e.g., "Smith, John")</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-medium text-surface-700 dark:text-surface-300 mb-1">Prefix Handling:</h4>
+          <p>When the "Handle name prefixes" option is enabled, the formatter intelligently processes:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Professional/Personal Titles:</strong> Preserves proper capitalization for honorifics (Dr., Mr., Mrs., Ms., Prof.)</li>
+            <li><strong>Compound Last Names:</strong> Properly formats compound name parts (van, von, de, den, der, etc.) according to naming conventions</li>
+            <li><strong>Special Cases:</strong> Correctly formats special prefixes like "Mac", "Mc", and "O'" according to standard conventions</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-medium text-surface-700 dark:text-surface-300 mb-1">Input Handling:</h4>
+          <p>The formatter accepts names in various formats:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Full names (e.g., "john smith")</li>
+            <li>Names with prefixes (e.g., "dr. james wilson")</li>
+            <li>Names already in "Last, First" format (e.g., "SMITH, JOHN")</li>
+            <li>Compound names (e.g., "van der meer")</li>
+            <li>Multiple names separated by tabs or new lines for batch processing</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-medium text-surface-700 dark:text-surface-300 mb-1">Examples:</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-1">
+            <div class="bg-white dark:bg-surface-800 p-2 rounded border border-surface-200 dark:border-surface-700">
+              <p class="font-medium mb-1 text-surface-800 dark:text-surface-200">Input:</p>
+              <pre class="bg-surface-100 dark:bg-surface-900 p-1.5 rounded text-xs overflow-x-auto">john smith
+dr. jane doe
+VAN DER MEER, jan
+O'SULLIVAN, mary</pre>
+            </div>
+            <div class="bg-white dark:bg-surface-800 p-2 rounded border border-surface-200 dark:border-surface-700">
+              <p class="font-medium mb-1 text-surface-800 dark:text-surface-200">Output (Title Case):</p>
+              <pre class="bg-surface-100 dark:bg-surface-900 p-1.5 rounded text-xs overflow-x-auto">John Smith
+Dr. Jane Doe
+Jan van der Meer
+Mary O'Sullivan</pre>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-medium text-surface-700 dark:text-surface-300 mb-1">Best Practices:</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Use Title Case for most customer-facing communications</li>
+            <li>Use Last, First format for alphabetical sorting and databases</li>
+            <li>Enable prefix handling when working with formal names or academic titles</li>
+            <li>Check a sample of results when processing large batches to ensure correct formatting</li>
+          </ul>
+        </div>
+      </div>
     </Card>
   </div>
 </template>

@@ -1,68 +1,120 @@
-# Rainmaker Toolbox 💰 🛠️
+# Sales Toolkit
 
-A collection of useful tools for sales professionals built as a single-page Vue.js application.
+<p align="center">
+  <img src="public/favicon.svg" alt="Sales Toolkit Logo" width="100" height="100" />
+</p>
 
-## Features
+<p align="center">
+  A modern, intuitive suite of data cleaning and formatting tools designed for sales professionals.
+</p>
 
-- **Phone Number Cleaner**: Format phone numbers in E.164 format with optional leading apostrophe for Excel
-- **Last Name Cleaner**: Properly capitalize names (first letter uppercase, rest lowercase)
-- **Text Lowercaser**: Convert text to lowercase
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue.js-3.3.4-42b883" alt="Vue 3.3.4" />
+  <img src="https://img.shields.io/badge/Tailwind-3.3.3-38bdf8" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Vite-4.4.9-646cff" alt="Vite 4.4.9" />
+</p>
 
-## Getting Started
+## ✨ Features
 
-### Prerequisites
+Sales Toolkit offers a collection of powerful, easy-to-use tools to help sales teams clean, format, and standardize their data:
 
-- Node.js (v14.x or higher recommended)
-- npm or yarn
+### 📱 Phone Number Cleaner
+- Standardize phone numbers to E.164 format
+- Add leading apostrophes for Excel compatibility
+- Configure country codes and default regions
+- Parse international formats with libphonenumber-js
 
-### Installation
+### 👤 Name Formatter
+- Format names in Title Case, UPPERCASE, or Last, First format
+- Intelligently handle name prefixes and honorifics
+- Process compound last names correctly
+- Support batch processing for multiple names
 
-1. Clone the repository:
+### 🔤 Text Tools
+- Transform case (lowercase, uppercase, title case)
+- Remove duplicates from lists
+- Sort lines alphabetically
+- Trim whitespace
+- Count and number lines
+- Process batch operations quickly and efficiently
+
+## 🚀 Live Demo
+
+Access the Sales Toolkit at: [https://sales-toolkit.example.com](https://sales-toolkit.example.com)
+
+## 🔧 Installation
+
+Clone the repository and install dependencies:
+
 ```bash
-git clone <repository-url>
+# Clone the repository
+git clone https://github.com/yourusername/sales-toolkit.git
 cd sales-toolkit
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn
-```
 
-3. Start the development server:
-```bash
+# Start the development server
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open your browser and navigate to http://localhost:5173/
+## 💻 Usage
 
-## Building for Production
+1. **Open the application** in your browser at `http://localhost:5173/`
+2. **Select a tool** from the sidebar navigation
+3. **Input your data** in the provided text area
+4. **Configure options** as needed for your specific task
+5. **View the processed output** in real-time
+6. **Copy the results** to clipboard with one click
 
-To build the application for production:
+## 🛠️ Technology Stack
 
-```bash
-npm run build
-# or
-yarn build
-```
+- **Frontend Framework**: Vue.js 3 with Composition API
+- **State Management**: Pinia
+- **Routing**: Vue Router
+- **Styling**: Tailwind CSS with custom design system
+- **Build Tool**: Vite
+- **Icons**: Material Icons
+- **Notifications**: Vue3-Toastify
+- **Phone Parsing**: libphonenumber-js
+- **Utility Functions**: VueUse
 
-The build output will be in the `dist` directory, which can be served by any static file server.
+## 🔄 Dark Mode
 
-## Technologies Used
+Sales Toolkit supports both light and dark modes that automatically adapt to user preferences. The theme can be toggled manually from the sidebar.
 
-- Vue.js 3
-- Vue Router
-- Tailwind CSS
-- libphonenumber-js for phone number formatting
-- Vite for build tooling
+## 📱 Responsive Design
 
-## Adding New Tools
+The application is fully responsive, working seamlessly on desktop, tablet, and mobile devices with an adaptive sidebar navigation.
 
-To add a new tool:
+## 🔍 Data Privacy
 
-1. Create a new Vue component in the `src/views` directory
-2. Add a route for the tool in `src/router/index.js`
-3. Add the tool to the list in `src/views/Home.vue`
+All data processing happens entirely in the browser. No data is ever sent to a server or stored anywhere outside your device, ensuring complete privacy and security.
+
+## 📋 Planned Features
+
+- Export functionality (CSV, Excel)
+- User-defined text transformation rules
+- Address formatting and standardization
+- CRM data import/export integrations
+- Custom presets and templates
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+<p align="center">
+  Made with ❤️ for sales teams everywhere
+</p>
