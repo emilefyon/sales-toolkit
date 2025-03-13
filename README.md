@@ -40,7 +40,7 @@ Sales Toolkit offers a collection of powerful, easy-to-use tools to help sales t
 
 ## 🚀 Live Demo
 
-Access the Sales Toolkit at: [https://sales-toolkit.example.com](https://sales-toolkit.example.com)
+Access the Sales Toolkit at: [https://sales-toolkit-production.up.railway.app](https://sales-toolkit-production.up.railway.app)
 
 ## 🔧 Installation
 
