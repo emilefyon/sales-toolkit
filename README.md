@@ -14,6 +14,17 @@
   <img src="https://img.shields.io/badge/Vite-4.4.9-646cff" alt="Vite 4.4.9" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/emilefyon/sales-toolkit" target="_blank">
+    <strong>📂 GitHub Repository: github.com/emilefyon/sales-toolkit</strong>
+  </a>
+</p>
+
+<p align="center">
+  This is an open-source project! We welcome contributions, feedback, and suggestions.<br>
+  Feel free to open issues, submit pull requests, or fork the repository to create your own version.
+</p>
+
 ## ✨ Features
 
 Sales Toolkit offers a collection of powerful, easy-to-use tools to help sales teams clean, format, and standardize their data:

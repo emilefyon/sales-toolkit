@@ -23,7 +23,29 @@
       </Card>
     </div>
     
-    <div class="mt-10">
+    <div class="mt-8">
+      <Card class="bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="flex items-center mb-4 md:mb-0">
+            <span class="material-icons-round text-primary-600 dark:text-primary-400 text-3xl mr-4">code</span>
+            <div>
+              <h2 class="text-lg font-medium text-surface-800 dark:text-surface-200 mb-1">Open Source Project</h2>
+              <p class="text-surface-600 dark:text-surface-400">This toolkit is open source and available on GitHub. We welcome your contributions!</p>
+            </div>
+          </div>
+          <Button 
+            variant="primary" 
+            icon="open_in_new" 
+            class="whitespace-nowrap" 
+            @click="openGitHub"
+          >
+            View on GitHub
+          </Button>
+        </div>
+      </Card>
+    </div>
+    
+    <div class="mt-8">
       <Card>
         <template #header>
           <h2 class="text-lg font-medium text-surface-800 dark:text-surface-200">Recent Updates</h2>
@@ -89,4 +111,8 @@ const recentUpdates = [
     icon: 'speed'
   }
 ];
+
+const openGitHub = () => {
+  window.open('https://github.com/emilefyon/sales-toolkit', '_blank');
+};
 </script> 
