@@ -95,19 +95,19 @@ const recentUpdates = [
   {
     id: 1,
     text: 'New theme options and dark mode support added.',
-    date: 'Today',
+    date: 'March 13, 2025',
     icon: 'dark_mode'
   },
   {
     id: 2,
     text: 'Phone Number Cleaner now supports international number formats.',
-    date: 'Yesterday',
+    date: 'March 12, 2025',
     icon: 'phone'
   },
   {
     id: 3,
     text: 'Improved performance and user interface across all tools.',
-    date: '3 days ago',
+    date: 'March 10, 2025',
     icon: 'speed'
   }
 ];
