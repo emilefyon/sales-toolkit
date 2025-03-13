@@ -10,6 +10,7 @@
       input-label="Names"
       input-placeholder="Enter names here (separate multiple names with tabs or lines)"
       input-hint="Enter full names or just last names"
+      :sample-data="sampleNames"
     >
       <template #header>
         <div class="flex items-center justify-between">
@@ -82,13 +83,6 @@
         </div>
       </template>
       
-      <template #sampleData>
-        <div v-if="false">john smith
-JANE DOE
-dR. James wilson
-VAN DER MEER, jan</div>
-      </template>
-      
       <template #footer>
         <div class="flex justify-between items-center">
           <div class="text-sm text-surface-500 dark:text-surface-400">
@@ -120,6 +114,12 @@ import Card from '@/components/ui/Card.vue';
 const inputText = ref('');
 const formatType = ref('titleCase');
 const handlePrefixes = ref(true);
+
+// Sample data
+const sampleNames = `john smith
+JANE DOE
+dR. James wilson
+VAN DER MEER, jan`;
 
 // Name prefixes to preserve
 const prefixes = ['Dr.', 'Dr', 'Mr.', 'Mr', 'Mrs.', 'Mrs', 'Ms.', 'Ms', 'Prof.', 'Prof'];

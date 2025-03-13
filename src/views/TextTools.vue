@@ -27,6 +27,7 @@
       input-label="Text"
       :input-placeholder="currentTool.placeholder"
       :input-hint="currentTool.hint"
+      :sample-data="currentTool.sampleData"
     >
       <template #header>
         <div class="flex items-center justify-between">
@@ -36,10 +37,6 @@
       
       <template #options>
         <component :is="currentTool.optionsComponent" v-if="currentTool.optionsComponent" v-bind="optionsProps" />
-      </template>
-      
-      <template #sampleData v-if="currentTool.sampleData">
-        <div v-if="false">{{ currentTool.sampleData }}</div>
       </template>
       
       <template #footer>

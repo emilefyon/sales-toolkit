@@ -22,7 +22,7 @@
             <div class="flex justify-between items-center mt-1">
               <span>{{ inputHint }}</span>
               <Button 
-                v-if="$slots.sampleData" 
+                v-if="sampleData" 
                 size="sm" 
                 variant="ghost" 
                 icon="play_circle" 
@@ -103,6 +103,10 @@ const props = defineProps({
   inputHint: {
     type: String,
     default: ''
+  },
+  sampleData: {
+    type: String,
+    default: ''
   }
 });
 
@@ -132,7 +136,6 @@ const clearAll = () => {
 };
 
 const loadSampleData = () => {
-  // Get sample data from parent component
   if (props.sampleData) {
     localInput.value = props.sampleData;
     emit('update:modelValue', props.sampleData);

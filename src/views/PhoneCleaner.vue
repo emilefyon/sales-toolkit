@@ -10,6 +10,7 @@
       input-label="Phone Numbers"
       input-placeholder="Enter phone numbers here (separate multiple numbers with tabs, lines, or spaces)"
       input-hint="Supports any standard phone format"
+      :sample-data="samplePhoneNumbers"
     >
       <template #header>
         <div class="flex items-center justify-between">
@@ -71,13 +72,6 @@
         </div>
       </template>
       
-      <template #sampleData>
-        <div v-if="false">+32 2 555 12 12
-0032 475 12 34 56
-047512341234
-001 555 123 4567</div>
-      </template>
-      
       <template #footer>
         <div class="flex justify-between items-center">
           <div class="text-sm text-surface-500 dark:text-surface-400">
@@ -113,6 +107,12 @@ const inputText = ref('');
 const leadingApostrophe = ref(true);
 const keepCountryCode = ref(true);
 const defaultCountry = ref('BE');
+
+// Sample data
+const samplePhoneNumbers = `+32 2 555 12 12
+0032 475 12 34 56
+047512341234
+001 555 123 4567`;
 
 // Stats
 const stats = ref({
