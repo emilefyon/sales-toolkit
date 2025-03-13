@@ -3,81 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainmaker Toolbox 💰 🛠️</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <!-- Material Icons Link -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Sales Toolkit - Powerful tools for sales professionals">
+    <title>Sales Toolkit</title>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- JetBrains Mono for code/monospace -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body>
-    <div
-      id="app"
-      class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
-    >
-      <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
-        ></div>
-        <div
-          class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
-        >
-          <div class="max-w-md mx-auto">
-            <div>
-              <h1 class="text-2xl font-semibold">
-                Welcome to the Rainmaker Toolbox!
-              </h1>
-            </div>
-            <ul class="mt-8">
-              <li
-                v-for="tool in tools"
-                :key="tool.name"
-                class="flex items-center p-4 mb-4 bg-gray-50 rounded-lg shadow"
-              >
-                <!-- Material Icon -->
-                <span class="material-icons mr-3">{{ tool.icon }}</span>
-                <a
-                  :href="tool.link"
-                  class="text-lg font-medium text-blue-600 hover:underline"
-                  >{{ tool.name }}</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      Vue.createApp({
-        data() {
-          return {
-            tools: [
-              {
-                name: "Phone number cleaner",
-                link: "phoneParser.html",
-                icon: "phone", // Material icon for phone
-              },
-              {
-                name: "Last Name Cleaner",
-                link: "lastNameCleaner.html",
-                icon: "edit", // Material icon for edit or similar
-              },
-              {
-                name: "Text Lowercaser",
-                link: "lowerCase.html",
-                icon: "text_format", // Material icon for text formatting
-              },
-              // Add more tools here as needed
-            ],
-          };
-        },
-      }).mount("#app");
-    </script>
+  <body class="antialiased text-surface-800 bg-surface-50 dark:text-surface-100 dark:bg-surface-900">
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
