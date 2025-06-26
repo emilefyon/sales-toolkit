@@ -224,6 +224,17 @@ const tools = [
       return lines.map((line, index) => `${index + 1}. ${line}`).join('\n');
     },
     optionsComponent: null
+  },
+  {
+    id: 'removeNumbers',
+    name: 'Remove Numbers',
+    icon: 'backspace',
+    description: 'Remove all numbers from the text',
+    placeholder: 'Enter text to remove numbers',
+    hint: 'All digits (0-9) will be removed from the text',
+    sampleData: 'Order 123: 2 apples and 3 bananas\nCall me at 555-1234',
+    processor: (text) => text.replace(/\d+/g, ''),
+    optionsComponent: null
   }
 ];
 
