@@ -233,7 +233,13 @@ const tools = [
     placeholder: 'Enter text to remove numbers',
     hint: 'All digits (0-9) will be removed from the text',
     sampleData: 'Order 123: 2 apples and 3 bananas\nCall me at 555-1234',
-    processor: (text) => text.replace(/\d+/g, ''),
+    processor: (text) => {
+      return text
+        .replace(/\d+/g, '')
+        .split('\n')
+        .map(line => line.replace(/^[\s\.,:;\-–—•]+/, ''))
+        .join('\n');
+    },
     optionsComponent: null
   }
 ];
