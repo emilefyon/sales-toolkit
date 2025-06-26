@@ -69,6 +69,20 @@
               </select>
             </div>
           </Card>
+          
+          <Card shadow="sm" class="p-4 bg-white dark:bg-surface-800">
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                id="keepOnlyMobile" 
+                v-model="keepOnlyMobile"
+                class="h-4 w-4 text-primary-600 dark:text-primary-400 border-surface-300 dark:border-surface-600 rounded focus:ring-primary-500"
+              >
+              <label for="keepOnlyMobile" class="ml-2 text-sm text-surface-700 dark:text-surface-300">
+                Only keep mobile numbers
+              </label>
+            </div>
+          </Card>
         </div>
       </template>
       
@@ -98,7 +112,7 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue';
-import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import { parsePhoneNumberFromString } from 'libphonenumber-js/max';
 import TextProcessor from '@/components/tools/TextProcessor.vue';
 import Card from '@/components/ui/Card.vue';
 
@@ -107,6 +121,7 @@ const inputText = ref('');
 const leadingApostrophe = ref(true);
 const keepCountryCode = ref(true);
 const defaultCountry = ref('BE');
+const keepOnlyMobile = ref(false);
 
 // Sample data
 const samplePhoneNumbers = `+32 2 555 12 12
@@ -143,7 +158,14 @@ const parsedText = computed(() => {
           invalidCount++;
           return 'Invalid number';
         }
-        
+        // If keepOnlyMobile is checked, filter out non-mobile numbers
+        if (keepOnlyMobile.value) {
+          const type = parsedPhoneNumber.getType();
+          if (type !== 'MOBILE' && type !== 'FIXED_LINE_OR_MOBILE') {
+            invalidCount++;
+            return 'Not mobile';
+          }
+        }
         validCount++;
         
         let formattedNumber;
